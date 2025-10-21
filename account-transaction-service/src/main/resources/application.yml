@@ -1,0 +1,24 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/devsu_test
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: sch_accounts
+        format_sql: true
+    show-sql: true
+
+people:
+  url: http://localhost:8081
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    com.test.at.account_transaction_service: debug
