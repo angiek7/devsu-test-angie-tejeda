@@ -3,20 +3,20 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/devsu_test
-    username: postgres
-    password: postgres
+    url: jdbc:postgresql://${HOST_PG}:${PORT_PG}/${NAME_DB}
+    username: ${USER_PG}
+    password: ${PASS_PG}
   jpa:
     hibernate:
       ddl-auto: validate
     properties:
       hibernate:
-        default_schema: sch_accounts
+        default_schema: ${DEFAULT_SCHEMA} # {sch_accounts}
         format_sql: true
     show-sql: true
 
 people:
-  url: http://localhost:8081
+  url: http://customer-people-service:8081
 
 logging:
   level:

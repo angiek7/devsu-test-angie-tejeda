@@ -30,6 +30,48 @@
 					"response": []
 				},
 				{
+					"name": "Get by Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/customers/JL-001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								"JL-001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/customers/CU-001788",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								"CU-001788"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Create",
 					"request": {
 						"method": "POST",
@@ -53,6 +95,36 @@
 							"path": [
 								"api",
 								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Angie Tejeda\",\r\n    \"gender\": \"M\",\r\n    \"age\": 27,\r\n    \"identification\": \"12378911\",\r\n    \"address\": \"Calle de la Paz, 1\",\r\n    \"phone\": \"123789\",\r\n    \"customerCode\": \"CU-0077\",\r\n    \"password\": \"12345\",\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/customers/CU-0077",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								"CU-0077"
 							]
 						}
 					},
@@ -98,6 +170,110 @@
 					"response": []
 				},
 				{
+					"name": "create Transaction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": \"585546\",\r\n    \"transactionDate\": \"2022-02-10\",\r\n    \"transactionType\": \"Withdrawal\",\r\n    \"amount\": 575\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Account",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": \"585546\",\r\n    \"accountType\": \"Checking\",\r\n    \"initialBalance\": 15000,\r\n    \"customerCode\": \"JL-001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/accounts/585546",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"accounts",
+								"585546"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Transaction",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": \"585546\",\r\n    \"accountType\": \"Checking\",\r\n    \"initialBalance\": 15000,\r\n    \"customerCode\": \"JL-001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/accounts/585546",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"accounts",
+								"585546"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "List Accounts",
 					"request": {
 						"method": "GET",
@@ -118,7 +294,48 @@
 					"response": []
 				},
 				{
+					"name": "List Transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get Account by Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/accounts/585546",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"accounts",
+								"585546"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transaction by Number",
 					"request": {
 						"method": "GET",
 						"header": [],
